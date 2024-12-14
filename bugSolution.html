@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Correct way to remove content: setting innerHTML to empty string
+    document.getElementById("myDiv").innerHTML = ''; 
+    //Alternative using removeChild (requires getting the parent):
+    // const parent = document.getElementById("myDiv").parentNode;
+    // parent.removeChild(document.getElementById("myDiv"));
+  </script>
+</body>
+</html>
